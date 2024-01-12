@@ -2,7 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import CDate from './components/CurrentDate';
 import Button from './components/Button';
+import Tasks from './components/Tasks';
 
 // TODO
 // ADD BUTTON FUNCTIONALITY 
@@ -14,10 +16,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text style={styles.headerText}>Tasky</Text>
+        <Text style={styles.headerText}><CDate /></Text>
       </View>
       <View style={styles.taskContainer}>
-        <Text>Open up App.tsx to start working on your app!</Text>
+        
         <StatusBar style="auto" />
       </View>
       <View style={styles.footerContainer}>
@@ -51,8 +53,9 @@ const styles = StyleSheet.create({
     
   },
   taskContainer: {
-    flex: 1,
-    paddingTop: 58,
+    flex: 2,
+    padding: 10,
+    width: '100%',
   },
   footerContainer: {
     flex: 0.7 / 3,
